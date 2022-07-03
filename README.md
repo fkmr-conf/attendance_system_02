@@ -8,7 +8,7 @@
 |ユーザー/User|機能/Function|
 |---|---|
 |共通/All User|- パスワード変更/Change Password|
-|雇用者/Employer-Side|- アルバイトスタッフおよび契約の登録/Register employee and their contracts <br>- 契約の確認/See contracts <br>- 雇用しているアルバイトスタッフの勤務の確認<br> 出退勤の事後申請の承認/Approve post-working report>|
+|雇用者/Employer-Side|- アルバイトスタッフおよび契約の登録/Register employee and their contracts <br>- 契約の確認/See contracts <br>- 雇用しているアルバイトスタッフの勤務の確認<br>- 出退勤の事後申請の承認/Approve post-working report>|
 |アルバイトスタッフ/Employee-Side|- 出退勤の打刻/Clock In or Out <br>- 契約の確認/See his/her contract <br>- 勤務記録の確認/See his/her working record<br>- 出退勤の事後申請/Post Report of working record|
 <br>
 <br>
