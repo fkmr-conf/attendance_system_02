@@ -18,4 +18,5 @@
 - 給与計算 / calculate salary
 - 明細PDFの発行 / Issue PDF Paystatement
 
-#### 作成の背景/
+#### 作成の背景/ the background I made this system
+
