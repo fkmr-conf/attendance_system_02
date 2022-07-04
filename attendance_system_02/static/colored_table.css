@@ -1,0 +1,7 @@
+h1{
+    color:darkblue;
+}
+
+tr:nth-child(odd){
+    background-color:	lightsteelblue;
+}

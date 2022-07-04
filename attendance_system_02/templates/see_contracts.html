@@ -1,0 +1,48 @@
+<!doctype html>
+{% load static %}
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'colored_table.css' %}">
+        <title>{{whole_title}}</title>
+    </head>
+    <body>
+        <h1>{{whole_title}}</h1>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+            <tr><td>{{form.as_p}}</td>
+            <td><input type="submit" value="search"></td></tr>
+            <tr><td>ex. 2022-03-21</td></tr>
+            </table>
+        </form>
+
+
+
+        <h2>{{title_1}}</h2>
+        <table>
+            <tr><th>ID</th><th>Name</th><th>Start Date</th><th>Terminal Date</th></tr>
+            {% for item in table_1 %}
+                <tr><td>{{ item.cnt_employee }}</td><td>{{ item.name }}</td>
+                <td>{{ item.contract_start }}</td><td>{{ item.contract_end }}</td></tr>
+            {% endfor %}
+        </table>
+
+
+        {% if search_flg %}
+            <h2>{{title_2}}</h2>
+            <table>
+                <tr><th>ID</th><th>Name</th><th>Start Date</th><th>Terminal Date</th></tr>
+                {% for item in table_2 %}
+                    <tr><td>{{ item.cnt_employee }}</td><td>{{ item.name }}</td>
+                    <td>{{ item.contract_start }}</td><td>{{ item.contract_end }}</td></tr>
+                {% endfor %}
+            </table>
+            
+            <br>
+            <br>
+            <h3>as of {{basis}}</h3>
+
+        {% endif %}
+    </body>
+</html>

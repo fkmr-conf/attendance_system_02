@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <h1>{{title}}</h1>
+    <p>Clock...</p>
+    <table>
+        <tr>
+            <form action="{% url 'rec_clock' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" name="in">IN</button>
+                <button type="submit" name="out">OUT</button>
+            </form>   
+        </tr>
+    </table>
+</body>
+
+
+
+</html>
