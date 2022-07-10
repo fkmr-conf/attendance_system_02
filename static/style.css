@@ -1,0 +1,12 @@
+h1{
+    color:darkblue;
+}
+
+table.colored tr:nth-child(odd){
+    background-color:	lightsteelblue;
+    width: 1px solid;
+}
+
+table.currender{
+    width: 1px solid;
+}

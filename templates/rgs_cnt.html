@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html lang='ja'>
+    <head>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>{{title}}</title>
+    </head>
+
+    <body>
+        <table>
+            <tr><th>ID: </th><td>{{registered_ID}}</td></tr>
+            <tr><th>NAME: </th><td>{{registered_name}}</td></tr>
+            <tr><th>Tax Category: </th><td>{{registered_tax_cate}}</td></tr>
+        </table>
+        
+        
+        <form action="{% url 'rgs_contract' %}" method="post">
+            {% csrf_token %}
+            <table>
+                <tr><td>{{form.as_table}}</td></tr>
+
+                <tr><td><td><td>
+                    <input type="submit" value='Register'>
+                </td></tr>
+    </body>
+</html>

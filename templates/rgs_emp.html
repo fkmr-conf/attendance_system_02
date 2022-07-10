@@ -1,0 +1,22 @@
+{% load static %}
+<!doctype html>
+<html lang='ja'>
+    <head>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>{{title}}</title>
+    </head>
+
+    <body>
+        <h1>{{title}}</h1>
+        <p>{{message}}</p>
+        <form action="{% url 'rgs_employee' %}" method="post">
+            {% csrf_token %}
+            <table>
+                <tr><td>{{form.as_table}}</td></tr>
+
+                <tr><td><td><td>
+                    <input type="submit" value='Register'>
+                </td></tr>
+    </body>
+</html>

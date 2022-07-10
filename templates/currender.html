@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>{{title}}</title>
+    </head>
+    <body>
+        {% block currender %}
+        {% endblock %}        
+        <!--カレンダー--><!--https://www.nblog09.com/w/2019/02/09/django-common-template/ -->
+
+            <table class="currender">
+                <tr><th>DATE</th><th>DAY</th><th>IN</th><th>OUT</th></tr>
+                {% for date_row in CURRENDER %}
+                <tr>
+                    <td>{{date_row.DATE}}</td><td><!--曜日 --></td>
+                </tr>
+                    {% for record in date_row.RECORD %}
+                        <tr><td></td><td>{{record.IN}}</td><td>{{record.OUT}}</td></tr>
+                    {% endfor %}                    
+                
+                {% endfor %}
+            </table>
+
+    </body>
+</html>
